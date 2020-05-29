@@ -1,11 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import PropTypes from "prop-types";
 import styled from "@emotion/styled";
 
 import HelpOutline from "@material-ui/icons/HelpOutline";
 
-import UserMenu from "../../../shared/components/user-menu";
 import ViewModeToggleButton from "./view-mode-toggle-button";
 import NotebookTaskButton from "./notebook-task-button";
 import KernelState from "./kernel-state";
@@ -24,15 +22,6 @@ const ViewControlsContainer = styled("div")`
 `;
 
 export class ViewControlsUnconnected extends React.Component {
-  static propTypes = {
-    isAuthenticated: PropTypes.bool.isRequired,
-    name: PropTypes.string,
-    avatar: PropTypes.string,
-    isServer: PropTypes.bool.isRequired,
-    login: PropTypes.func.isRequired,
-    logout: PropTypes.func.isRequired
-  };
-
   render() {
     return (
       <ViewControlsContainer>
@@ -40,17 +29,6 @@ export class ViewControlsUnconnected extends React.Component {
         <NotebookTaskButton task={tasks.toggleHelpModal}>
           <HelpOutline />
         </NotebookTaskButton>
-        {this.props.isServer && (
-          // FIXME: userment should be its own connected component.
-          // this stuff should not be passed down as props
-          <UserMenu
-            isAuthenticated={this.props.isAuthenticated}
-            loginCallback={this.props.login}
-            logoutCallback={this.props.logout}
-            avatar={this.props.avatar}
-            username={this.props.name}
-          />
-        )}
 
         <ViewModeToggleButton />
       </ViewControlsContainer>
