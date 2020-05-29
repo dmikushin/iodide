@@ -5,7 +5,7 @@ import THEME from "../../theme";
 // which Golden Layout sets to 5px.
 export default styled("div")`
   height: ${THEME.header.height};
-  background: ${THEME.header.background};
+  background-color: #24292e;
   display: grid;
   grid-template-columns: [left-start] auto [left-end middle-start] 1fr [middle-end right-start] auto [right-end];
   justify-content: space-between;

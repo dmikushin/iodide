@@ -6,7 +6,7 @@ body::before {
 }
 
 .navbar {
-  background-image: linear-gradient(to right, rgb(63, 27, 71), rgb(30, 15, 33));
+  background-color: #24292e;
   border-bottom: none;
 }
 

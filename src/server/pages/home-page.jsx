@@ -17,7 +17,6 @@ import AttentionBlock from "../components/attention-block";
 import NewNotebookButton from "../components/new-notebook-button";
 import FeaturedNotebooks from "../../shared/components/featured-notebooks";
 import DropTarget from "../../shared/components/drop-target";
-import THEME from "../../shared/theme";
 import { sharedProperties } from "../../server/style/base";
 import { createNotebookRequest } from "../../shared/server-api/notebook";
 import { saveFileToServer } from "../../shared/utils/file-operations";
@@ -26,7 +25,7 @@ import { fadeIn, bounce } from "../../shared/keyframes";
 const Overlay = styled.div`
   align-items: center;
   animation: ${fadeIn} 0.25s;
-  background: ${THEME.header.backgroundLeft};
+  background-color: #24292e;
   box-sizing: border-box;
   color: #fff;
   display: grid;
