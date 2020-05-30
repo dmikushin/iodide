@@ -380,7 +380,7 @@ export const stateProperties = {
   },
   title: {
     type: "string",
-    default: "untitled"
+    default: document.title
   },
   userData: {
     type: "object",
